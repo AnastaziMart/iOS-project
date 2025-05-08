@@ -9,26 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 26){
-            Text("Knock, knock!")
-                .padding()
-                .background(Color.yellow, in:
-                                RoundedRectangle(cornerRadius: 8))
-            
-            Text("Who's there?")
-                .padding()
-                .background(Color.teal, in:
-                                RoundedRectangle(cornerRadius: 8))
-            
-            Text("It is a me, Anastasiia!")
-                .padding()
-                .background(Color.pink, in:
-                                RoundedRectangle(cornerRadius: 8))
+        
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+            VStack {
+                        
+                        
+
+                        Image("niagarafalls")
+                                .resizable()
+                                .cornerRadius(15)
+                                .aspectRatio(contentMode: .fit)
+                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                                Text("Niagara Falls")
+                            .font(.largeTitle)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            
+                
         }
-        .padding()
+        
+        
+        }
+
+        
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews:
+PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
